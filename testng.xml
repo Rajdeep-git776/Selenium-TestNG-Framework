@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Luma Ecommerce Test Automation">
+    <listeners>
+        <listener class-name="com.ecom.qa.ExtentReportListener.ExtentReportListener"></listener>
+    </listeners>
+    <test name="Luma Ecommerce application Test">
+        <classes>
+            <class name="com.ecom.qa.tests.MyAccountTest"/>
+            <class name="com.ecom.qa.tests.LoginTest"/>
+
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
