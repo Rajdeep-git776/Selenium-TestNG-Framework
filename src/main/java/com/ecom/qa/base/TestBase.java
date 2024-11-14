@@ -39,6 +39,7 @@ public class TestBase {
 
         if(browserName.equals("chrome")){
             ChromeOptions options = new ChromeOptions();
+            // Remote webdriver for selenium grid
 //            driver = new RemoteWebDriver(new URL("http://192.168.29.18:4444"),options);
             driver = new ChromeDriver();
 
