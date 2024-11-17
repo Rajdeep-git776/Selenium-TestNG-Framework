@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class TestBase {
     public static WebDriver driver;
     public static Properties prop;
-
+    // constructor to initialise the properties file.
     public TestBase(){
          prop = new Properties();
         FileInputStream fis = null;
