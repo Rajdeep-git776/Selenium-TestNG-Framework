@@ -6,6 +6,7 @@ package com.ecom.qa.tests;
 import com.ecom.qa.base.TestBase;
 import com.ecom.qa.pages.LoginPage;
 import com.ecom.qa.pages.MyAccount;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -24,9 +25,12 @@ public class LoginTest extends TestBase {
         super();
     }
 
+    Logger log = org.apache.log4j.Logger.getLogger(LoginTest.class);
+
     @BeforeMethod
     public void setUp() throws MalformedURLException {
         initialization();
+        log.info("Initialisation Done");
         loginPage = new LoginPage();
     }
 
@@ -35,12 +39,14 @@ public class LoginTest extends TestBase {
     public void loginPageTitleTest(){
         String actualTitle=loginPage.validateLoginPageTitle();
         Assert.assertEquals(actualTitle,"Customer Login");
+        log.info("loginPageTitleTest executed");
     }
 
     @Test (priority = 2)
     public void lumaLogoImageTest(){
         boolean flag =loginPage.validateLogo();
         Assert.assertTrue(flag);
+        log.info("lumaLogoImageTest executed");
     }
 
     @Test (priority = 3, dataProvider = "LoginTestData")

@@ -22,9 +22,11 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 public class ExtentReportListener implements IReporter {
     private ExtentReports extent;
 
+
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
                                String outputDirectory) {
         ExtentSparkReporter spark = new ExtentSparkReporter(outputDirectory + File.separator + "Extent.html");
+        
         extent = new ExtentReports();
         extent.attachReporter(spark);
 
