@@ -3,11 +3,16 @@
 <suite name="Luma Ecommerce Test Automation">
     <listeners>
         <listener class-name="com.ecom.qa.ExtentReportListener.ExtentReportListener"></listener>
+        <listener class-name="com.analyzer.RetryTransformer"></listener>
     </listeners>
     <test name="Luma Ecommerce application Test">
         <classes>
             <class name="com.ecom.qa.tests.MyAccountTest"/>
             <class name="com.ecom.qa.tests.LoginTest"/>
+<!--                <methods>-->
+<!--                    <include name="lumaLogoImageTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
 
         </classes>
     </test> <!-- Test -->
